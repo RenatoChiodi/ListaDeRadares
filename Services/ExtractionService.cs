@@ -1,17 +1,16 @@
-using System;
-using System.Net;
 using System.IO;
+using System.Net;
 
 namespace ListaDeRadares.Services
 {
     public class ExtractionService
     {
-        public static void Navigation()
+        public string Navigation()
         {
-            GetPage();
+            return GetPage();
         }
 
-        public static void GetPage()
+        public static string GetPage()
         
         {
         string html = string.Empty;
@@ -25,7 +24,7 @@ namespace ListaDeRadares.Services
         {
             html = reader.ReadToEnd();
         }
-            Console.WriteLine(html);
+            return html;
         }
     }
 }
