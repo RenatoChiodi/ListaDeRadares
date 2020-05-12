@@ -1,4 +1,3 @@
-C:\Projects\dotnet\ListaDeRadares\obj\Debug\netcoreapp2.2\ListaDeRadares.csproj.CoreCompileInputs.cache
 C:\Projects\dotnet\ListaDeRadares\obj\Debug\netcoreapp2.2\ListaDeRadares.AssemblyInfoInputs.cache
 C:\Projects\dotnet\ListaDeRadares\obj\Debug\netcoreapp2.2\ListaDeRadares.AssemblyInfo.cs
 C:\Projects\dotnet\ListaDeRadares\bin\Debug\netcoreapp2.2\ListaDeRadares.deps.json
@@ -9,3 +8,4 @@ C:\Projects\dotnet\ListaDeRadares\bin\Debug\netcoreapp2.2\ListaDeRadares.pdb
 C:\Projects\dotnet\ListaDeRadares\obj\Debug\netcoreapp2.2\ListaDeRadares.dll
 C:\Projects\dotnet\ListaDeRadares\obj\Debug\netcoreapp2.2\ListaDeRadares.pdb
 C:\Projects\dotnet\ListaDeRadares\obj\Debug\netcoreapp2.2\ListaDeRadares.csprojAssemblyReference.cache
+C:\Projects\dotnet\ListaDeRadares\bin\Debug\netcoreapp2.2\config.json

@@ -7,18 +7,26 @@ namespace ListaDeRadares.Services
 {
     public class ParserService
     {
-        public List<Radar> Parse(string _html)
+        private static AppSettings _appSettings;
+        public List<Radar> Parse(AppSettings appSettings, string html)
         {
-            HtmlDocument html = new HtmlDocument();
-            html.LoadHtml(_html);
+            _appSettings = appSettings;
+
+            HtmlDocument _html = new HtmlDocument();
+            _html.LoadHtml(html);
 
             List<Radar> radares = new List<Radar>();
 
-            var stringRadares = html.DocumentNode.SelectNodes("//div[@id='parent-fieldname-text-ad7b486622a84decaf3fbb6957ad7ff7']/table/tbody/tr");
+            var stringRadares = _html.DocumentNode.SelectNodes(appSettings.Path);
 
             foreach (var radar in stringRadares.Skip(1))
             {
-                radares.Add(ParseRadar(radar));
+                var radarParseado = ParseRadar(radar);
+
+                if(radarParseado != null)
+                {
+                    radares.Add(radarParseado);
+                }
             }
 
             return radares;
@@ -35,7 +43,7 @@ namespace ListaDeRadares.Services
                 Concessionaria = htmlRadar.SelectSingleNode("td[5]").InnerHtml
             };
 
-            return radar;
+            return radar.Equipamento.Equals("&nbsp;")? null : radar;
         }
     }
 }

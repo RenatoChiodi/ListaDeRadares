@@ -1,20 +1,25 @@
 using System.IO;
 using System.Net;
+using ListaDeRadares.Domain;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ListaDeRadares.Services
 {
     public class ExtractionService
     {
-        public string Navigation()
+        private static AppSettings _appSettings;
+        public string Navigation(AppSettings appSettings)
         {
+            _appSettings= appSettings;
+
             return GetPage();
         }
 
         public static string GetPage()
-        
         {
+
         string html = string.Empty;
-        string url = "https://www.prf.gov.br/portal/multas-e-infracoes/lista-de-radares-fixos";
+        string url = _appSettings.URL;
 
         HttpWebRequest request = (HttpWebRequest) WebRequest.Create(url);
 

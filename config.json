@@ -1,0 +1,6 @@
+{
+    "AppSettings":{
+        "URL":"https://portal.prf.gov.br/multas-e-infracoes/lista-de-radares-fixos",
+        "Path": "//div[h1/span[text()='Lista de radares fixos']]//table//tr"
+    }
+}
